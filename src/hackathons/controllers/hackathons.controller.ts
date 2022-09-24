@@ -14,8 +14,8 @@ export class HackathonsController {
   }
 
   @UseGuards(JwtAuthGuard)
-  @Get("/developers")
-  getDevelopers(@Param("idName")idName:string, @Param("idValue")idValue:string) {
+  @Get("/developers/:idName/:idValue")
+  getDevelopers( @Param("idName") idName:string, @Param("idValue") idValue:string ) {
     return this.hackathonsService.getDevelopers({name: idName, value: idValue});
   }
 }

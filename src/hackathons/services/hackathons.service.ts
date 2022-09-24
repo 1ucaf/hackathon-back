@@ -19,6 +19,7 @@ export class HackathonsService {
     });
   }
   getDevelopers(hackathonId:Id): Developer[] {
+    console.log(hackathonId);
     return hackathons.find(h=>h.id.name == hackathonId.name && h.id.value == hackathonId.value).developers;
   }
   
