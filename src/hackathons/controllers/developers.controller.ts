@@ -1,5 +1,5 @@
 import { Controller, Get, UseGuards } from "@nestjs/common";
-import { JwtAuthGuard } from "src/auth/jwt-auth.guard";
+import { JwtAuthGuard } from "./../../auth/passport-guards/jwt-auth.guard";
 import { HackathonsService } from "../services/hackathons.service";
 
 @Controller("developers")

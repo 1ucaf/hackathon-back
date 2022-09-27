@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { Developer } from '../repository/entities/hackathon.entity';
-import { Id } from '../repository/entities/user.entity';
-import { hackathons } from '../repository/mock/mock';
+import { Developer } from '../../repository/entities/hackathon.entity';
+import { Id } from '../../repository/entities/user.entity';
+import { hackathons } from '../../repository/mock/mock';
 
 @Injectable()
 export class HackathonsService {

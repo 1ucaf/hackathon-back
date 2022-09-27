@@ -1,14 +1,14 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { Cron } from '@nestjs/schedule';
-import { Hackathon, Developer } from 'src/hackathons/repository/entities/hackathon.entity';
-import { Result } from 'src/hackathons/repository/entities/user.entity';
-import { hackathons } from 'src/hackathons/repository/mock/mock';
+import { Hackathon, Developer } from './../../repository/entities/hackathon.entity';
+import { Result, User } from './../dtos/user.dto';
+import { hackathons } from './../../repository/mock/mock';
 import { CustomHttpService } from './customHttp.service';
 
 @Injectable()
 export class CronService {
     constructor(private readonly httpService: CustomHttpService) {}
-  
+
     private readonly logger = new Logger(CronService.name);
 
     @Cron('0 */5 * * * *')
@@ -30,7 +30,7 @@ export class CronService {
         
         await Promise.all([
             this.httpService.get('https://randomuser.me/api/?inc=location,dob,name,id')
-            .then(response => {
+            .then((response:User) => {
                 const data:Result = response.results[0];
                 hackathon.id = data.id;
                 hackathon.name = data.name.last + "'s hackathon";
@@ -47,7 +47,7 @@ export class CronService {
 
     async get10Developers():Promise<Developer[]> {
         let count = 1;
-        const data = await this.httpService.get('https://randomuser.me/api/?exc=picture,login&results=10');
+        const data:User = await this.httpService.get('https://randomuser.me/api/?exc=picture,login&results=10');
         const developers:Developer[] = data.results.map(randomUser=>{
             return {
                 rank: count++,
