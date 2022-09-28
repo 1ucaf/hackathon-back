@@ -1,4 +1,5 @@
-import { Developer, Hackathon } from "../entities/hackathon.entity";
+import { Hackathon } from "../entities/hackathon.entity";
+import { Developer } from "../entities/user.entity";
 
 const developers:Developer[] = [
     {

@@ -1,9 +1,10 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { Cron } from '@nestjs/schedule';
-import { Hackathon, Developer } from './../../repository/entities/hackathon.entity';
+import { Hackathon } from './../../repository/entities/hackathon.entity';
 import { Result, User } from './../dtos/user.dto';
 import { hackathons } from './../../repository/mock/mock';
 import { CustomHttpService } from './customHttp.service';
+import { Developer } from 'src/repository/entities/user.entity';
 
 @Injectable()
 export class CronService {

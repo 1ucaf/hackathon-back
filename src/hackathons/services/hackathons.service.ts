@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Developer } from '../../repository/entities/hackathon.entity';
+import { Developer } from '../../repository/entities/user.entity'
 import { Id } from '../../repository/entities/user.entity';
 import { hackathons } from '../../repository/mock/mock';
 

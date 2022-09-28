@@ -38,7 +38,8 @@ export class Picture {
     thumbnail: string;
 }
 
-export class Result {
+export class Developer {
+    rank: number;
     gender: string;
     name: Name;
     location: Location;
@@ -58,9 +59,4 @@ export class Info {
     results: number;
     page: number;
     version: string;
-}
-
-export class User {
-    results: Result[];
-    info: Info;
 }
