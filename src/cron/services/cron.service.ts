@@ -1,9 +1,10 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { Cron } from '@nestjs/schedule';
-import { Hackathon, Developer } from 'src/hackathons/repository/entities/hackathon.entity';
+import { Hackathon } from 'src/hackathons/repository/entities/hackathon.entity';
+import { Developer } from 'src/hackathons/repository/entities/developer.entity';
 import { Result } from 'src/hackathons/repository/entities/user.entity';
-import { hackathons } from 'src/hackathons/repository/mock/mock';
 import { CustomHttpService } from './customHttp.service';
+import { AppDataSource } from 'src/hackathons/repository/dataSource';
 
 @Injectable()
 export class CronService {
@@ -17,9 +18,10 @@ export class CronService {
     }
 
     async getAndInsertHackathon(){
-        this.getHackathon().then(hackathon => {
-            hackathons.push(hackathon);
-            console.log(hackathons);
+        this.getHackathon().then(async hackathon => {
+            await AppDataSource.getMongoRepository(Hackathon).insertOne(hackathon)
+            // hackathons.push(hackathon);
+            // console.log(hackathons);
         }).catch(e=>{
             console.log(e);
             this.logger.debug(e);
@@ -34,7 +36,7 @@ export class CronService {
                 const data:Result = response.results[0];
                 hackathon.id = data.id;
                 hackathon.name = data.name.last + "'s hackathon";
-                hackathon.date = data.dob.date;
+                hackathon.date = data.dob.date.toLocaleString(); //REVISAR SI ANDA BIEN
                 hackathon.place = data.location;
             }),
             this.get10Developers().then(developers => {

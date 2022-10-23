@@ -1,33 +1,61 @@
 import { Injectable } from '@nestjs/common';
-import { Developer } from '../repository/entities/hackathon.entity';
+import { AppDataSource } from '../repository/dataSource';
+import { Developer } from '../repository/entities/developer.entity';
+import { Hackathon } from '../repository/entities/hackathon.entity';
 import { Id } from '../repository/entities/user.entity';
-import { hackathons } from '../repository/mock/mock';
+
+export interface DeveloperBasicInfo {
+  name: string,
+  age: string,
+  gender: string,
+}
 
 @Injectable()
 export class HackathonsService {
   getHelloHackathons(): string {
     return 'Hello Hackathons!';
   }
-  getHackathons(){
-    return hackathons.map(h=> {
-      return {
-        id: h.id,
-        place: h.place,
-        date: h.date,
-        name: h.name,
-      }
-    });
+  async getHackathons(){
+    return await AppDataSource.getMongoRepository(Hackathon).find()
+    .then(data=>{
+      return data.map(h=> {
+        return {
+          id: h.id,
+          place: h.place,
+          date: h.date,
+          name: h.name,
+        }
+      });
+    })
   }
-  getDevelopers(hackathonId:Id): Developer[] {
+  async getDevelopers(hackathonId:Id): Promise<Developer[]> {
     console.log(hackathonId);
-    return hackathons.find(h=>h.id.name == hackathonId.name && h.id.value == hackathonId.value).developers;
+    return await AppDataSource.getMongoRepository(Hackathon).findOneBy({
+      "id.name": hackathonId.name,
+      "id.value": hackathonId.value,
+    })
+    .then(hackathon => hackathon.developers);
   }
   
-  getTopDevelopers(): Developer[] {
-    return hackathons.map(h => h.developers.find(d=>d.rank === 1));
+  async getTopDevelopers(): Promise<DeveloperBasicInfo[]> {
+    return await AppDataSource.getMongoRepository(Hackathon)
+    .find()
+    .then(h=> {
+      return h.map(h => h.developers.find(d=>d.rank === 1))
+      .map(d => {
+        return {
+            name: `${d.name.title} ${d.name.first} ${d.name.last}`,
+            age: d.dob.age + " Y.O.",
+            gender: d.gender
+        }
+    })})
+    
   }
 
-  getAllDevelopers(): Developer[] {
-    return hackathons.reduce((previousValue, currentValue) => [...previousValue, ...currentValue.developers], [])
+  async getAllDevelopers(): Promise<Developer[]> {
+    return await AppDataSource.getMongoRepository(Hackathon).find()
+    .then(hackathon => {
+      return hackathon.reduce((previousValue, currentValue) => [...previousValue, ...currentValue.developers], [])
+    })
   }
 }

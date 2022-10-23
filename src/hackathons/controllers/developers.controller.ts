@@ -15,12 +15,6 @@ export class DevelopersController {
   @UseGuards(JwtAuthGuard)
   @Get("/top")
   getTopDevelopers() {
-    return this.hackathonsService.getTopDevelopers().map(d => {
-        return {
-            name: `${d.name.title} ${d.name.first} ${d.name.last}`,
-            age: d.dob.age + " Y.O.",
-            gender: d.gender
-        }
-    });
+    return this.hackathonsService.getTopDevelopers();
   }
 }

@@ -1,15 +1,21 @@
 import { Location } from "./location.entity";
-import { Id, Result } from "./user.entity";
+import { Id } from "./user.entity";
+import { Column, Entity, ObjectID, ObjectIdColumn } from "typeorm";
+import { Developer } from "./developer.entity";
 
-
+@Entity()
 export class Hackathon {
+    @ObjectIdColumn()
+    _id: ObjectID
+    @Column()
     id:Id;
+    @Column()
     name: string;
+    @Column(_type => Location)
     place: Location;
-    date: Date|string
+    @Column()
+    date: string;
+    @Column(_type => Developer)
     developers: Developer[];
 }
 
-export class Developer extends Result {
-    rank: number;
-}
