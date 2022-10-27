@@ -4,6 +4,7 @@ import { Hackathon } from './../../repository/entities/hackathon.entity';
 import { Result, User } from './../dtos/user.dto';
 import { CustomHttpService } from './customHttp.service';
 import { Developer } from 'src/repository/entities/developer.entity';
+import { AppDataSource } from 'src/repository/dataSource';
 
 @Injectable()
 export class CronService {

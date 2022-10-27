@@ -1,5 +1,5 @@
 import { DataSource } from "typeorm"
-import { Developer } from "../entities/developer.entity"
+import { Developer } from "../../repository/entities/developer.entity"
 import { Hackathon } from "../entities/hackathon.entity"
 
 export const AppDataSource = new DataSource({

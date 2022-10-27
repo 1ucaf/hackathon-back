@@ -6,8 +6,8 @@ import { HackathonsModule } from './hackathons/hackathons.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Developer } from './hackathons/repository/entities/developer.entity';
-import { Hackathon } from './hackathons/repository/entities/hackathon.entity';
+import { Developer } from './repository/entities/developer.entity';
+import { Hackathon } from './repository/entities/hackathon.entity';
 
 @Module({
   imports: [

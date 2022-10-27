@@ -3,7 +3,9 @@ import { Location } from "./location.entity";
 import { Dob, Id, Login, Name, Picture, Registered } from "./user.entity";
 
 export class Developer {
+    @Column()
     rank: number;
+    @Column()
     gender: string;
     @Column()
     name: Name;

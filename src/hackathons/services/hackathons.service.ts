@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { AppDataSource } from '../repository/dataSource';
-import { Developer } from '../repository/entities/developer.entity';
-import { Hackathon } from '../repository/entities/hackathon.entity';
-import { Id } from '../repository/entities/user.entity';
+import { AppDataSource } from '../../repository/dataSource';
+import { Developer } from '../../repository/entities/developer.entity';
+import { Hackathon } from '../../repository/entities/hackathon.entity';
+import { Id } from '../../repository/entities/user.entity';
 
 export interface DeveloperBasicInfo {
   name: string,
