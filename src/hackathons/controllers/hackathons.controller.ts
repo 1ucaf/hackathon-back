@@ -1,6 +1,6 @@
 import { Controller, Get, Param, UseGuards } from '@nestjs/common';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
-import { Id } from '../repository/entities/user.entity';
+import { JwtAuthGuard } from './../../auth/passport-guards/jwt-auth.guard';
+import { Id } from '../../repository/entities/user.entity';
 import { HackathonsService } from './../services/hackathons.service';
 
 @Controller("hackathons")

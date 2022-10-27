@@ -57,30 +57,3 @@ export class Picture {
     @Column()
     thumbnail: string;
 }
-
-export class Result {
-    @Column()
-    gender: string;
-    @Column()
-    name: Name;
-    @Column()
-    location: Location;
-    @Column()
-    email: string;
-    @Column()
-    login: Login;
-    @Column()
-    dob: Dob;
-    @Column()
-    registered: Registered;
-    @Column()
-    phone: string;
-    @Column()
-    cell: string;
-    @Column()
-    id: Id;
-    @Column()
-    picture: Picture;
-    @Column()
-    nat: string;
-}

@@ -18,4 +18,3 @@ export class Hackathon {
     @Column(_type => Developer)
     developers: Developer[];
 }
-
