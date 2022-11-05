@@ -8,8 +8,9 @@ export class CronService {
 
     private readonly logger = new Logger(CronService.name);
 
-    // @Cron('*/20 * * * * *')
+    @Cron('*/5 * * * * *')
     async handleCron() {
         this.service.getAndInsertHackathon();
+        this.logger.verbose("New Hackathon inserted!");
     }
 }
