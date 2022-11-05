@@ -1,7 +1,81 @@
-import { Hackathon } from "../entities/hackathon.entity";
+// import { Hackathon } from "../entities/hackathon.entity";
+// import { Developer } from "../entities/developer.entity";
+
 import { Developer } from "../entities/developer.entity";
+import { Hackathon } from "../entities/hackathon.entity";
 
+export const developerToTestInsert:Developer = {
+    _id: null,
+    id: {
+        name: "CPR",
+        value: "020297-5436"
+    },
+    gender: "female",
+    name: {
+        title: "Mrs",
+        first: "Mathilde",
+        last: "Christensen"
+    },
+    location: {
+        street: {
+        number: 6085,
+        name: "Kærbyvej"
+        },
+        city: "Roedovre",
+        state: "Midtjylland",
+        country: "Denmark",
+        postcode: 45746,
+        coordinates: {
+        latitude: "-41.0211",
+        longitude: "60.9123"
+        },
+        timezone: {
+        offset: "+8:00",
+        description: "Beijing, Perth, Singapore, Hong Kong"
+        }
+    },
+    email: "mathilde.christensen@example.com",
+    dob: {
+        date: "1997-02-03T02:43:18.369Z",
+        age: 25
+    },
+    registered: {
+        date: "2014-08-08T15:14:50.008Z",
+        age: 8
+    },
+    phone: "97595174",
+    cell: "21475840",
+    nat: "DK"
+}
 
+export const hackathonToTestInsert:Hackathon = {
+    _id: null,
+    id: {
+        name:"TFN",
+        value:"557448189"
+    },
+    name: "Mr Harrison's Hackathon",
+    place: {
+        street: {
+            number: 8857,
+            name: "Otipua Road"
+        },
+        city: "Upper Hutt",
+        state: "Nelson",
+        country: "New Zealand",
+        postcode: 27911,
+        coordinates: {
+            latitude: "53.1897",
+            longitude: "-95.6131"
+        },
+        timezone: {
+        offset: "-3:00",
+        description: "Brazil, Buenos Aires, Georgetown"
+        }
+    },
+    date: "2000-10-21T02:46:51.128Z",
+    developers: null,
+};
 
 // const developers:Developer[] = [
 //     {

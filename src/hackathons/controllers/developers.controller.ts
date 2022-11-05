@@ -12,6 +12,11 @@ export class DevelopersController {
     return this.hackathonsService.getAllDevelopers();
   }
 
+  @Get("/age")
+  getAgeTest() {
+    return this.hackathonsService.getAge("1990-01-11T18:24:59.672Z");
+  }
+
   @UseGuards(JwtAuthGuard)
   @Get("/top")
   getTopDevelopers() {

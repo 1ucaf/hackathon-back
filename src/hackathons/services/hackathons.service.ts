@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { AppDataSource } from '../../repository/dataSource';
 import { Developer } from '../../repository/entities/developer.entity';
-import { Hackathon } from '../../repository/entities/hackathon.entity';
-import { Id } from '../../repository/entities/user.entity';
+import { DevInHackathon, Hackathon } from '../../repository/entities/hackathon.entity';
+import { Id } from '../../repository/entities/developer.entity';
+import { RepositoryService } from 'src/repository/service/repository.service';
 
 export interface DeveloperBasicInfo {
   name: string,
@@ -12,11 +12,15 @@ export interface DeveloperBasicInfo {
 
 @Injectable()
 export class HackathonsService {
+  constructor(
+      private readonly repositoryService: RepositoryService,
+    ) {}
+  
   getHelloHackathons(): string {
     return 'Hello Hackathons!';
   }
   async getHackathons(){
-    return await AppDataSource.getMongoRepository(Hackathon).find()
+    return await this.repositoryService.getHackathons()
     .then(data=>{
       return data.map(h=> {
         return {
@@ -28,34 +32,35 @@ export class HackathonsService {
       });
     })
   }
-  async getDevelopers(hackathonId:Id): Promise<Developer[]> {
-    console.log(hackathonId);
-    return await AppDataSource.getMongoRepository(Hackathon).findOneBy({
-      "id.name": hackathonId.name,
-      "id.value": hackathonId.value,
-    })
-    .then(hackathon => hackathon.developers);
+  async getDevelopers(hackathonId:Id): Promise<DevInHackathon[]> {
+    return await this.repositoryService.getDevsInHackathon(hackathonId)
+      .then(devs=> devs.map(dev=>{return {...dev, age: this.getAge(dev.dob)}}));
   }
   
   async getTopDevelopers(): Promise<DeveloperBasicInfo[]> {
-    return await AppDataSource.getMongoRepository(Hackathon)
-    .find()
-    .then(h=> {
-      return h.map(h => h.developers.find(d=>d.rank === 1))
-      .map(d => {
+    return await this.repositoryService.getHackathons()
+    .then(hackathons=> {
+      return hackathons.map(hackathon => hackathon.developers.find(d=>d.rank === 1))
+      .map(dev => {
         return {
-            name: `${d.name.title} ${d.name.first} ${d.name.last}`,
-            age: d.dob.age + " Y.O.",
-            gender: d.gender
+          ...dev,
+          age: this.getAge(dev.dob) + " Y.O.",
         }
     })})
-    
+  }
+
+  getAge(stringBirthDate:string){
+    var today = new Date();
+    var birthDate = new Date(stringBirthDate);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
   }
 
   async getAllDevelopers(): Promise<Developer[]> {
-    return await AppDataSource.getMongoRepository(Hackathon).find()
-    .then(hackathon => {
-      return hackathon.reduce((previousValue, currentValue) => [...previousValue, ...currentValue.developers], [])
-    })
+    return await this.repositoryService.getAllDevelopers();
   }
 }

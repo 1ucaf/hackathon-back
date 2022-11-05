@@ -6,8 +6,7 @@ import { HackathonsModule } from './hackathons/hackathons.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Developer } from './repository/entities/developer.entity';
-import { Hackathon } from './repository/entities/hackathon.entity';
+import { join } from 'path';
 
 @Module({
   imports: [
@@ -15,10 +14,10 @@ import { Hackathon } from './repository/entities/hackathon.entity';
       type: 'mongodb',
       host: 'localhost',
       port: 27017,
-      // username: 'root',
-      // password: 'root',
+      // username: '',
+      // password: '',
       database: 'test',
-      entities: [Developer, Hackathon],
+      entities: [join(__dirname, '**', '*.entity.{ts,js}')],
       synchronize: true,
     }),
     HackathonsModule,
