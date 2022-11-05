@@ -18,15 +18,35 @@ export class GetDataService {
     private readonly logger = new Logger(GetDataService.name);
 
     async getAndInsertHackathon(){
-        this.getHackathon().then(async hackathon => {
-            await this.repositoryService.insertHackathon(hackathon)
-        }).catch(e=>{
-            console.log(e);
+        try {
+            const hackathon:Hackathon = await this.getHackathon();
+            const developersWithoutId:Developer[] = await this.generate10Developers();
+            const developers:Developer[] = await this.insertDevelopersIntoDB(developersWithoutId);
+            const devList:DevInHackathon[] = this.createDevListItems(developers);
+            hackathon.developers = devList;
+            await this.repositoryService.insertHackathon(hackathon);
+        }
+        catch(e) {
+            this.logger.error(e);
             this.logger.debug(e);
-        })
+        }
     }
 
-    async getDataForHackathon():Promise<User> {
+    async getHackathon():Promise<Hackathon> {
+        const hackathon:Hackathon = new Hackathon();
+        
+        await this.getCleanDataForHackathon()
+            .then((response:User) => {
+                const data:Result = response.results[0];
+                hackathon.id = data.id;
+                hackathon.name = data.name.last + "'s hackathon";
+                hackathon.date = data.dob.date.toLocaleString();
+                hackathon.place = data.location;
+            })
+        return hackathon;
+    };
+
+    async getCleanDataForHackathon():Promise<User> {
         let data:User = null;
         while(data === null) {
             data = await this.httpService.get(apiUrl + '?inc=location,dob,name,id')
@@ -37,27 +57,7 @@ export class GetDataService {
         return data;
     }
 
-    async getHackathon():Promise<Hackathon> {
-        const hackathon:Hackathon = new Hackathon();
-        
-        await Promise.all([
-            this.getDataForHackathon()
-            .then((response:User) => {
-                const data:Result = response.results[0];
-                hackathon.id = data.id;
-                hackathon.name = data.name.last + "'s hackathon";
-                hackathon.date = data.dob.date.toLocaleString(); //REVISAR SI ANDA BIEN
-                hackathon.place = data.location;
-            }),
-            this.getAndInsert10Developers().then(async developers => {
-                hackathon.developers = await this.insertDevListIntoDB(developers);
-            })
-        ]);
-
-        return hackathon;
-    };
-
-    async insertDevListIntoDB(developers:Developer[]):Promise<DevInHackathon[]> {
+    createDevListItems(developers:Developer[]):DevInHackathon[] {
         let rankCount = 1;
         const devsInHack:DevInHackathon[] = developers.map(dev => {
             return {
@@ -79,7 +79,7 @@ export class GetDataService {
         return await this.httpService.get(apiUrl + '?exc=picture,login&results=10')
     }
 
-    async getAndInsert10Developers():Promise<Developer[]> {
+    async generate10Developers():Promise<Developer[]> {
         const developers:Developer[] = [];
         //filtrado de datos corruptos
         let cleanResultsCount = 0;
@@ -101,6 +101,6 @@ export class GetDataService {
                 }
             }));
         }
-        return await this.insertDevelopersIntoDB(developers);
+        return developers;
     }
 }

@@ -12,30 +12,32 @@ import { RepositoryService } from './../../repository/service/repository.service
 
 describe('AppController', () => {
     let cronController: CronController;
+    let getDataService: GetDataService;
     let repositoryService: RepositoryService;
 
     beforeEach(async () => {
-        const app: TestingModule = await Test.createTestingModule({
-            imports: [
-              TypeOrmModule.forFeature([Developer, Hackathon]),
-              HttpModule.register({
-                timeout: 50000,
-                maxRedirects: 5,
-              }),
-              ScheduleModule.forRoot()
-            ],
-            controllers: [CronController],
-            providers: [
-              CronService,
-              CustomHttpService,
-              RepositoryService,
-              GetDataService,
-            ]
-        },).compile();
-        repositoryService = await app.resolve(RepositoryService);
-        cronController = app.get<CronController>(CronController);
+      const app: TestingModule = await Test.createTestingModule({
+          imports: [
+            TypeOrmModule.forFeature([Developer, Hackathon]),
+            HttpModule.register({
+              timeout: 50000,
+              maxRedirects: 5,
+            }),
+            ScheduleModule.forRoot()
+          ],
+          controllers: [CronController],
+          providers: [
+            CronService,
+            CustomHttpService,
+            RepositoryService,
+            GetDataService,
+          ]
+      },).compile();
+      repositoryService = await app.resolve(RepositoryService);
+      getDataService = await app.resolve(GetDataService);
+      cronController = app.get<CronController>(CronController);
 
-        
+      getDataService.getAndInsertHackathon();
 
     });
 
