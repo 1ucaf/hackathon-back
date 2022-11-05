@@ -32,9 +32,11 @@ describe('AppController', () => {
               GetDataService,
             ]
         },).compile();
-
         repositoryService = await app.resolve(RepositoryService);
         cronController = app.get<CronController>(CronController);
+
+        
+
     });
 
     describe('root', () => {
