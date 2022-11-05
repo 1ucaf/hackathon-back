@@ -5,9 +5,22 @@ import { CronModule } from './cron/cron.module';
 import { HackathonsModule } from './hackathons/hackathons.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { Developer } from './repository/entities/developer.entity';
+import { Hackathon } from './repository/entities/hackathon.entity';
 
 @Module({
   imports: [
+    TypeOrmModule.forRoot({
+      type: 'mongodb',
+      host: 'localhost',
+      port: 27017,
+      // username: 'root',
+      // password: 'root',
+      database: 'test',
+      entities: [Developer, Hackathon],
+      synchronize: true,
+    }),
     HackathonsModule,
     CronModule,
     AuthModule,
