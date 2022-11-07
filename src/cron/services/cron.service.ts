@@ -10,7 +10,7 @@ export class CronService {
 
     @Cron('0 */5 * * * *')
     async handleCron() {
-        this.service.getAndInsertHackathon();
+        await this.service.getAndInsertHackathon();
         this.logger.verbose("New Hackathon inserted!");
     }
 }
