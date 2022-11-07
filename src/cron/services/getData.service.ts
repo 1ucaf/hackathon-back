@@ -2,9 +2,9 @@ import { Injectable, Logger } from '@nestjs/common';
 import { DevInHackathon, Hackathon } from './../../repository/entities/hackathon.entity';
 import { Result, User } from './../dtos/user.dto';
 import { CustomHttpService } from '../../http/services/customHttp.service';
-import { Developer } from 'src/repository/entities/developer.entity';
+import { Developer } from './../../repository/entities/developer.entity';
 import { ObjectID } from 'typeorm';
-import { RepositoryService } from 'src/repository/service/repository.service';
+import { RepositoryService } from './../../repository/service/repository.service';
 
 const apiUrl = 'https://randomuser.me/api/'
 

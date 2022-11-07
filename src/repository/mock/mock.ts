@@ -9,6 +9,7 @@ export const developerToTestInsert:Developer = {
     id: {
         name: "CPR",
         value: "020297-5436"
+    
     },
     gender: "female",
     name: {
@@ -18,20 +19,20 @@ export const developerToTestInsert:Developer = {
     },
     location: {
         street: {
-        number: 6085,
-        name: "Kærbyvej"
+            number: 6085,
+            name: "Kærbyvej"
         },
         city: "Roedovre",
         state: "Midtjylland",
         country: "Denmark",
         postcode: 45746,
         coordinates: {
-        latitude: "-41.0211",
-        longitude: "60.9123"
+            latitude: "-41.0211",
+            longitude: "60.9123"
         },
         timezone: {
-        offset: "+8:00",
-        description: "Beijing, Perth, Singapore, Hong Kong"
+            offset: "+8:00",
+            description: "Beijing, Perth, Singapore, Hong Kong"
         }
     },
     email: "mathilde.christensen@example.com",
@@ -69,925 +70,883 @@ export const hackathonToTestInsert:Hackathon = {
             longitude: "-95.6131"
         },
         timezone: {
-        offset: "-3:00",
-        description: "Brazil, Buenos Aires, Georgetown"
+            offset: "-3:00",
+            description: "Brazil, Buenos Aires, Georgetown"
         }
     },
     date: "2000-10-21T02:46:51.128Z",
     developers: null,
 };
 
-// const developers:Developer[] = [
-//     {
-//       rank: 1,
-//       picture: null,
-//       login: null,
-//       gender: "female",
-//       name: {
-//         title: "Mrs",
-//         first: "Mathilde",
-//         last: "Christensen"
-//       },
-//       location: {
-//         street: {
-//           number: 6085,
-//           name: "Kærbyvej"
-//         },
-//         city: "Roedovre",
-//         state: "Midtjylland",
-//         country: "Denmark",
-//         postcode: 45746,
-//         coordinates: {
-//           latitude: "-41.0211",
-//           longitude: "60.9123"
-//         },
-//         timezone: {
-//           offset: "+8:00",
-//           description: "Beijing, Perth, Singapore, Hong Kong"
-//         }
-//       },
-//       email: "mathilde.christensen@example.com",
-//       dob: {
-//         date: "1997-02-03T02:43:18.369Z",
-//         age: 25
-//       },
-//       registered: {
-//         date: "2014-08-08T15:14:50.008Z",
-//         age: 8
-//       },
-//       phone: "97595174",
-//       cell: "21475840",
-//       id: {
-//         name: "CPR",
-//         value: "020297-5436"
-//       },
-//       nat: "DK"
-//   },
-//   {
-//       rank: 2,
-//       picture: null,
-//       login: null,
-//       gender: "male",
-//       name: {
-//         title: "Mr",
-//         first: "Kevin",
-//         last: "Hunt"
-//       },
-//       location: {
-//         street: {
-//           number: 8559,
-//           name: "Green Rd"
-//         },
-//         city: "Albany",
-//         state: "New South Wales",
-//         country: "Australia",
-//         postcode: 5229,
-//         coordinates: {
-//           latitude: "-13.9773",
-//           longitude: "-81.8810"
-//         },
-//         timezone: {
-//           offset: "+7:00",
-//           description: "Bangkok, Hanoi, Jakarta"
-//         }
-//       },
-//       email: "kevin.hunt@example.com",
-//       dob: {
-//         date: "1971-01-24T13:47:51.624Z",
-//         age: 51
-//       },
-//       registered: {
-//         date: "2003-12-05T00:53:50.279Z",
-//         age: 18
-//       },
-//       phone: "07-3921-0851",
-//       cell: "0425-556-455",
-//       id: {
-//         name: "TFN",
-//         value: "219026706"
-//       },
-//       nat: "AU"
-//   },
-//   {
-//       rank: 3,
-//       picture: null,
-//       login: null,
-//       gender: "male",
-//       name: {
-//         title: "Mr",
-//         first: "Vassilios",
-//         last: "Kilic"
-//       },
-//       location: {
-//         street: {
-//           number: 7654,
-//           name: "Mittelstraße"
-//         },
-//         city: "Langenhagen",
-//         state: "Thüringen",
-//         country: "Germany",
-//         postcode: 40474,
-//         coordinates: {
-//           latitude: "10.3137",
-//           longitude: "39.3670"
-//         },
-//         timezone: {
-//           offset: "+5:00",
-//           description: "Ekaterinburg, Islamabad, Karachi, Tashkent"
-//         }
-//       },
-//       email: "vassilios.kilic@example.com",
-//       dob: {
-//         date: "1953-01-12T16:06:35.417Z",
-//         age: 69
-//       },
-//       registered: {
-//         date: "2012-06-30T05:29:50.181Z",
-//         age: 10
-//       },
-//       phone: "0983-8601607",
-//       cell: "0172-4792662",
-//       id: {
-//         name: "SVNR",
-//         value: "78 120153 K 433"
-//       },
-//       nat: "DE"
-//   },
-//   {
-//       rank: 4,
-//       picture: null,
-//       login: null,
-//       gender: "male",
-//       name: {
-//         title: "Mr",
-//         first: "علی رضا",
-//         last: "کامروا"
-//       },
-//       location: {
-//         street: {
-//           number: 4140,
-//           name: "مقدس اردبیلی"
-//         },
-//         city: "آمل",
-//         state: "خراسان رضوی",
-//         country: "Iran",
-//         postcode: 79670,
-//         coordinates: {
-//           latitude: "-23.4461",
-//           longitude: "159.1358"
-//         },
-//         timezone: {
-//           offset: "+5:30",
-//           description: "Bombay, Calcutta, Madras, New Delhi"
-//         }
-//       },
-//       email: "aalyrd.khmrw@example.com",
-//       dob: {
-//         date: "1977-09-15T05:49:55.524Z",
-//         age: 45
-//       },
-//       registered: {
-//         date: "2019-03-24T17:59:34.309Z",
-//         age: 3
-//       },
-//       phone: "013-71356495",
-//       cell: "0946-413-4693",
-//       id: {
-//         name: "",
-//         value: null
-//       },
-//       nat: "IR"
-//   },
-//   {
-//       rank: 5,
-//       picture: null,
-//       login: null,
-//       gender: "female",
-//       name: {
-//         title: "Miss",
-//         first: "Hazel",
-//         last: "Thomas"
-//       },
-//       location: {
-//         street: {
-//           number: 1460,
-//           name: "Photinia Ave"
-//         },
-//         city: "Warragul",
-//         state: "New South Wales",
-//         country: "Australia",
-//         postcode: 5042,
-//         coordinates: {
-//           latitude: "43.5532",
-//           longitude: "-86.4504"
-//         },
-//         timezone: {
-//           offset: "-3:30",
-//           description: "Newfoundland"
-//         }
-//       },
-//       email: "hazel.thomas@example.com",
-//       dob: {
-//         date: "1970-06-11T20:07:41.572Z",
-//         age: 52
-//       },
-//       registered: {
-//         date: "2013-01-03T13:42:38.535Z",
-//         age: 9
-//       },
-//       phone: "03-4929-9856",
-//       cell: "0425-477-336",
-//       id: {
-//         name: "TFN",
-//         value: "457057693"
-//       },
-//       nat: "AU"
-//   },
-//   {
-//       rank: 6,
-//       picture: null,
-//       login: null,
-//       gender: "male",
-//       name: {
-//         title: "Mr",
-//         first: "Draško",
-//         last: "Vrhovac"
-//       },
-//       location: {
-//         street: {
-//           number: 8213,
-//           name: "Gorana Gajića "
-//         },
-//         city: "Bajina Bašta",
-//         state: "Kosovska Mitrovica",
-//         country: "Serbia",
-//         postcode: 42311,
-//         coordinates: {
-//           latitude: "-88.7643",
-//           longitude: "29.6682"
-//         },
-//         timezone: {
-//           offset: "+9:30",
-//           description: "Adelaide, Darwin"
-//         }
-//       },
-//       email: "drasko.vrhovac@example.com",
-//       dob: {
-//         date: "1952-11-23T02:34:30.368Z",
-//         age: 69
-//       },
-//       registered: {
-//         date: "2008-07-28T05:21:09.587Z",
-//         age: 14
-//       },
-//       phone: "031-8926-918",
-//       cell: "068-5436-171",
-//       id: {
-//         name: "SID",
-//         value: "752248622"
-//       },
-//       nat: "RS"
-//   },
-//   {
-//       rank: 7,
-//       picture: null,
-//       login: null,
-//       gender: "male",
-//       name: {
-//         title: "Mr",
-//         first: "Maanas",
-//         last: "Shah"
-//       },
-//       location: {
-//         street: {
-//           number: 6379,
-//           name: "Lindsay St"
-//         },
-//         city: "Pimpri-Chinchwad",
-//         state: "Assam",
-//         country: "India",
-//         postcode: 72002,
-//         coordinates: {
-//           latitude: "-64.4359",
-//           longitude: "119.9860"
-//         },
-//         timezone: {
-//           offset: "-7:00",
-//           description: "Mountain Time (US & Canada)"
-//         }
-//       },
-//       email: "maanas.shah@example.com",
-//       dob: {
-//         date: "1995-03-10T01:50:38.821Z",
-//         age: 27
-//       },
-//       registered: {
-//         date: "2022-02-09T07:08:02.382Z",
-//         age: 0
-//       },
-//       phone: "9740776121",
-//       cell: "9893868724",
-//       id: {
-//         name: "UIDAI",
-//         value: "031653299141"
-//       },
-//       nat: "IN"
-//   },
-//   {
-//       rank: 8,
-//       picture: null,
-//       login: null,
-//       gender: "female",
-//       name: {
-//         title: "Miss",
-//         first: "Florence",
-//         last: "Ross"
-//       },
-//       location: {
-//         street: {
-//           number: 5320,
-//           name: "Richmond Ave"
-//         },
-//         city: "Charlottetown",
-//         state: "Northwest Territories",
-//         country: "Canada",
-//         postcode: "A3Z 4V8",
-//         coordinates: {
-//           latitude: "-17.9171",
-//           longitude: "7.7062"
-//         },
-//         timezone: {
-//           offset: "-7:00",
-//           description: "Mountain Time (US & Canada)"
-//         }
-//       },
-//       email: "florence.ross@example.com",
-//       dob: {
-//         date: "1964-03-07T07:37:18.581Z",
-//         age: 58
-//       },
-//       registered: {
-//         date: "2012-06-08T23:34:33.168Z",
-//         age: 10
-//       },
-//       phone: "T30 E48-0352",
-//       cell: "Q41 R56-8833",
-//       id: {
-//         name: "SIN",
-//         value: "542048327"
-//       },
-//       nat: "CA"
-//   },
-//   {
-//       rank: 9,
-//       picture: null,
-//       login: null,
-//       gender: "male",
-//       name: {
-//         title: "Mr",
-//         first: "Batur",
-//         last: "Polat"
-//       },
-//       location: {
-//         street: {
-//           number: 9697,
-//           name: "Necatibey Cd"
-//         },
-//         city: "Kocaeli",
-//         state: "Antalya",
-//         country: "Turkey",
-//         postcode: 96829,
-//         coordinates: {
-//           latitude: "-33.3036",
-//           longitude: "-142.5320"
-//         },
-//         timezone: {
-//           offset: "+3:00",
-//           description: "Baghdad, Riyadh, Moscow, St. Petersburg"
-//         }
-//       },
-//       email: "batur.polat@example.com",
-//       dob: {
-//         date: "1993-02-13T04:37:02.427Z",
-//         age: 29
-//       },
-//       registered: {
-//         date: "2021-11-07T14:34:38.168Z",
-//         age: 0
-//       },
-//       phone: "(386)-418-4775",
-//       cell: "(869)-554-8950",
-//       id: {
-//         name: "",
-//         value: null
-//       },
-//       nat: "TR"
-//   },
-//   {
-//       rank: 10,
-//       picture:null,
-//       login: null,
-//       gender: "male",
-//       name: {
-//         title: "Mr",
-//         first: "Elias",
-//         last: "Roche"
-//       },
-//       location: {
-//         street: {
-//           number: 5732,
-//           name: "Rue Barrème"
-//         },
-//         city: "Aulnay-sous-Bois",
-//         state: "Deux-Sèvres",
-//         country: "France",
-//         postcode: 79740,
-//         coordinates: {
-//           latitude: "24.8296",
-//           longitude: "-20.3798"
-//         },
-//         timezone: {
-//           offset: "-10:00",
-//           description: "Hawaii"
-//         }
-//       },
-//       email: "elias.roche@example.com",
-//       dob: {
-//         date: "1999-10-23T15:25:25.117Z",
-//         age: 22
-//       },
-//       registered: {
-//         date: "2005-12-30T17:24:14.248Z",
-//         age: 16
-//       },
-//       phone: "02-70-47-69-11",
-//       cell: "06-85-12-33-75",
-//       id: {
-//         name: "INSEE",
-//         value: "1990995506289 04"
-//       },
-//       nat: "FR"
-//   }
-// ]
+export const developersToTestInsert:Developer[] = [
+    {
+        _id: null,
+        gender: "female",
+        name: {
+            title: "Mrs",
+            first: "Mathilde",
+            last: "Christensen"
+        },
+        location: {
+            street: {
+                number: 6085,
+                name: "Kærbyvej"
+            },
+            city: "Roedovre",
+            state: "Midtjylland",
+            country: "Denmark",
+            postcode: 45746,
+            coordinates: {
+                latitude: "-41.0211",
+                longitude: "60.9123"
+            },
+            timezone: {
+                offset: "+8:00",
+                description: "Beijing, Perth, Singapore, Hong Kong"
+            }
+        },
+        email: "mathilde.christensen@example.com",
+        dob: {
+            date: "1997-02-03T02:43:18.369Z",
+            age: 25
+        },
+        registered: {
+            date: "2014-08-08T15:14:50.008Z",
+            age: 8
+        },
+        phone: "97595174",
+        cell: "21475840",
+        id: {
+            name: "CPR",
+            value: "020297-5436"
+        },
+        nat: "DK"
+    },
+    {
+        _id: null,
+        gender: "male",
+        name: {
+            title: "Mr",
+            first: "Kevin",
+            last: "Hunt"
+        },
+        location: {
+            street: {
+                number: 8559,
+                name: "Green Rd"
+            },
+            city: "Albany",
+            state: "New South Wales",
+            country: "Australia",
+            postcode: 5229,
+            coordinates: {
+                latitude: "-13.9773",
+                longitude: "-81.8810"
+            },
+            timezone: {
+                offset: "+7:00",
+                description: "Bangkok, Hanoi, Jakarta"
+            }
+        },
+        email: "kevin.hunt@example.com",
+        dob: {
+            date: "1971-01-24T13:47:51.624Z",
+            age: 51
+        },
+        registered: {
+            date: "2003-12-05T00:53:50.279Z",
+            age: 18
+        },
+        phone: "07-3921-0851",
+        cell: "0425-556-455",
+        id: {
+            name: "TFN",
+            value: "219026706"
+        },
+        nat: "AU"
+    },
+    {
+        _id: null,
+        gender: "male",
+        name: {
+            title: "Mr",
+            first: "Vassilios",
+            last: "Kilic"
+        },
+        location: {
+            street: {
+                number: 7654,
+                name: "Mittelstraße"
+            },
+            city: "Langenhagen",
+            state: "Thüringen",
+            country: "Germany",
+            postcode: 40474,
+            coordinates: {
+                latitude: "10.3137",
+                longitude: "39.3670"
+            },
+            timezone: {
+                offset: "+5:00",
+                description: "Ekaterinburg, Islamabad, Karachi, Tashkent"
+            }
+        },
+        email: "vassilios.kilic@example.com",
+        dob: {
+            date: "1953-01-12T16:06:35.417Z",
+            age: 69
+        },
+        registered: {
+            date: "2012-06-30T05:29:50.181Z",
+            age: 10
+        },
+        phone: "0983-8601607",
+        cell: "0172-4792662",
+        id: {
+            name: "SVNR",
+            value: "78 120153 K 433"
+        },
+        nat: "DE"
+    },
+    {
+        _id: null,
+        gender: "male",
+        name: {
+            title: "Mr",
+            first: "علی رضا",
+            last: "کامروا"
+        },
+        location: {
+            street: {
+                number: 4140,
+                name: "مقدس اردبیلی"
+            },
+            city: "آمل",
+            state: "خراسان رضوی",
+            country: "Iran",
+            postcode: 79670,
+            coordinates: {
+                latitude: "-23.4461",
+                longitude: "159.1358"
+            },
+            timezone: {
+                offset: "+5:30",
+                description: "Bombay, Calcutta, Madras, New Delhi"
+            }
+        },
+        email: "aalyrd.khmrw@example.com",
+        dob: {
+            date: "1977-09-15T05:49:55.524Z",
+            age: 45
+        },
+        registered: {
+            date: "2019-03-24T17:59:34.309Z",
+            age: 3
+        },
+        phone: "013-71356495",
+        cell: "0946-413-4693",
+        id: {
+            name: "",
+            value: null
+        },
+        nat: "IR"
+    },
+    {
+        _id: null,
+        gender: "female",
+        name: {
+            title: "Miss",
+            first: "Hazel",
+            last: "Thomas"
+        },
+        location: {
+            street: {
+                number: 1460,
+                name: "Photinia Ave"
+            },
+            city: "Warragul",
+            state: "New South Wales",
+            country: "Australia",
+            postcode: 5042,
+            coordinates: {
+                latitude: "43.5532",
+                longitude: "-86.4504"
+            },
+            timezone: {
+                offset: "-3:30",
+                description: "Newfoundland"
+            }
+        },
+        email: "hazel.thomas@example.com",
+        dob: {
+            date: "1970-06-11T20:07:41.572Z",
+            age: 52
+        },
+        registered: {
+            date: "2013-01-03T13:42:38.535Z",
+            age: 9
+        },
+        phone: "03-4929-9856",
+        cell: "0425-477-336",
+        id: {
+            name: "TFN",
+            value: "457057693"
+        },
+        nat: "AU"
+    },
+    {
+        _id: null,
+        gender: "male",
+        name: {
+            title: "Mr",
+            first: "Draško",
+            last: "Vrhovac"
+        },
+        location: {
+            street: {
+                number: 8213,
+                name: "Gorana Gajića "
+            },
+            city: "Bajina Bašta",
+            state: "Kosovska Mitrovica",
+            country: "Serbia",
+            postcode: 42311,
+            coordinates: {
+                latitude: "-88.7643",
+                longitude: "29.6682"
+            },
+            timezone: {
+                offset: "+9:30",
+                description: "Adelaide, Darwin"
+            }
+        },
+        email: "drasko.vrhovac@example.com",
+        dob: {
+            date: "1952-11-23T02:34:30.368Z",
+            age: 69
+        },
+        registered: {
+            date: "2008-07-28T05:21:09.587Z",
+            age: 14
+        },
+        phone: "031-8926-918",
+        cell: "068-5436-171",
+        id: {
+            name: "SID",
+            value: "752248622"
+        },
+        nat: "RS"
+    },
+    {
+        _id: null,
+        gender: "male",
+        name: {
+            title: "Mr",
+            first: "Maanas",
+            last: "Shah"
+        },
+        location: {
+            street: {
+                number: 6379,
+                name: "Lindsay St"
+            },
+            city: "Pimpri-Chinchwad",
+            state: "Assam",
+            country: "India",
+            postcode: 72002,
+            coordinates: {
+                latitude: "-64.4359",
+                longitude: "119.9860"
+            },
+            timezone: {
+                offset: "-7:00",
+                description: "Mountain Time (US & Canada)"
+            }
+        },
+        email: "maanas.shah@example.com",
+        dob: {
+            date: "1995-03-10T01:50:38.821Z",
+            age: 27
+        },
+        registered: {
+            date: "2022-02-09T07:08:02.382Z",
+            age: 0
+        },
+        phone: "9740776121",
+        cell: "9893868724",
+        id: {
+            name: "UIDAI",
+            value: "031653299141"
+        },
+        nat: "IN"
+    },
+    {
+        _id: null,
+        gender: "female",
+        name: {
+            title: "Miss",
+            first: "Florence",
+            last: "Ross"
+        },
+        location: {
+            street: {
+                number: 5320,
+                name: "Richmond Ave"
+            },
+            city: "Charlottetown",
+            state: "Northwest Territories",
+            country: "Canada",
+            postcode: "A3Z 4V8",
+            coordinates: {
+                latitude: "-17.9171",
+                longitude: "7.7062"
+            },
+            timezone: {
+                offset: "-7:00",
+                description: "Mountain Time (US & Canada)"
+            }
+        },
+        email: "florence.ross@example.com",
+        dob: {
+            date: "1964-03-07T07:37:18.581Z",
+            age: 58
+        },
+        registered: {
+            date: "2012-06-08T23:34:33.168Z",
+            age: 10
+        },
+        phone: "T30 E48-0352",
+        cell: "Q41 R56-8833",
+        id: {
+            name: "SIN",
+            value: "542048327"
+        },
+        nat: "CA"
+    },
+    {
+        _id: null,
+        gender: "male",
+        name: {
+            title: "Mr",
+            first: "Batur",
+            last: "Polat"
+        },
+        location: {
+            street: {
+                number: 9697,
+                name: "Necatibey Cd"
+            },
+            city: "Kocaeli",
+            state: "Antalya",
+            country: "Turkey",
+            postcode: 96829,
+            coordinates: {
+                latitude: "-33.3036",
+                longitude: "-142.5320"
+            },
+            timezone: {
+                offset: "+3:00",
+                description: "Baghdad, Riyadh, Moscow, St. Petersburg"
+            }
+        },
+        email: "batur.polat@example.com",
+        dob: {
+            date: "1993-02-13T04:37:02.427Z",
+            age: 29
+        },
+        registered: {
+            date: "2021-11-07T14:34:38.168Z",
+            age: 0
+        },
+        phone: "(386)-418-4775",
+        cell: "(869)-554-8950",
+        id: {
+            name: "",
+            value: null
+        },
+        nat: "TR"
+    },
+    {
+        _id: null,
+        gender: "male",
+        name: {
+            title: "Mr",
+            first: "Elias",
+            last: "Roche"
+        },
+        location: {
+            street: {
+                number: 5732,
+                name: "Rue Barrème"
+            },
+            city: "Aulnay-sous-Bois",
+            state: "Deux-Sèvres",
+            country: "France",
+            postcode: 79740,
+            coordinates: {
+                latitude: "24.8296",
+                longitude: "-20.3798"
+            },
+            timezone: {
+                offset: "-10:00",
+                description: "Hawaii"
+            }
+        },
+        email: "elias.roche@example.com",
+        dob: {
+            date: "1999-10-23T15:25:25.117Z",
+            age: 22
+        },
+        registered: {
+            date: "2005-12-30T17:24:14.248Z",
+            age: 16
+        },
+        phone: "02-70-47-69-11",
+        cell: "06-85-12-33-75",
+        id: {
+            name: "INSEE",
+            value: "1990995506289 04"
+        },
+        nat: "FR"
+    }
+]
 
-// const developers1:Developer[] = [
-//   {
-//       rank: 1,
-//       picture: null,
-//       login: null,
-//       gender: "female",
-//       name: {
-//         title: "Mrs",
-//         first: "Mathilde",
-//         last: "Christensen"
-//       },
-//       location: {
-//         street: {
-//           number: 6085,
-//           name: "Kærbyvej"
-//         },
-//         city: "Roedovre",
-//         state: "Midtjylland",
-//         country: "Denmark",
-//         postcode: 45746,
-//         coordinates: {
-//           latitude: "-41.0211",
-//           longitude: "60.9123"
-//         },
-//         timezone: {
-//           offset: "+8:00",
-//           description: "Beijing, Perth, Singapore, Hong Kong"
-//         }
-//       },
-//       email: "mathilde.christensen@example.com",
-//       dob: {
-//         date: "1997-02-03T02:43:18.369Z",
-//         age: 25
-//       },
-//       registered: {
-//         date: "2014-08-08T15:14:50.008Z",
-//         age: 8
-//       },
-//       phone: "97595174",
-//       cell: "21475840",
-//       id: {
-//         name: "CPR",
-//         value: "020297-5436"
-//       },
-//       nat: "DK"
-//   },
-//   {
-//       rank: 2,
-//       picture: null,
-//       login: null,
-//       gender: "male",
-//       name: {
-//         title: "Mr",
-//         first: "Kevin",
-//         last: "Hunt"
-//       },
-//       location: {
-//         street: {
-//           number: 8559,
-//           name: "Green Rd"
-//         },
-//         city: "Albany",
-//         state: "New South Wales",
-//         country: "Australia",
-//         postcode: 5229,
-//         coordinates: {
-//           latitude: "-13.9773",
-//           longitude: "-81.8810"
-//         },
-//         timezone: {
-//           offset: "+7:00",
-//           description: "Bangkok, Hanoi, Jakarta"
-//         }
-//       },
-//       email: "kevin.hunt@example.com",
-//       dob: {
-//         date: "1971-01-24T13:47:51.624Z",
-//         age: 51
-//       },
-//       registered: {
-//         date: "2003-12-05T00:53:50.279Z",
-//         age: 18
-//       },
-//       phone: "07-3921-0851",
-//       cell: "0425-556-455",
-//       id: {
-//         name: "TFN",
-//         value: "219026706"
-//       },
-//       nat: "AU"
-//   },
-//   {
-//       rank: 3,
-//       picture: null,
-//       login: null,
-//       gender: "male",
-//       name: {
-//         title: "Mr",
-//         first: "Vassilios",
-//         last: "Kilic"
-//       },
-//       location: {
-//         street: {
-//           number: 7654,
-//           name: "Mittelstraße"
-//         },
-//         city: "Langenhagen",
-//         state: "Thüringen",
-//         country: "Germany",
-//         postcode: 40474,
-//         coordinates: {
-//           latitude: "10.3137",
-//           longitude: "39.3670"
-//         },
-//         timezone: {
-//           offset: "+5:00",
-//           description: "Ekaterinburg, Islamabad, Karachi, Tashkent"
-//         }
-//       },
-//       email: "vassilios.kilic@example.com",
-//       dob: {
-//         date: "1953-01-12T16:06:35.417Z",
-//         age: 69
-//       },
-//       registered: {
-//         date: "2012-06-30T05:29:50.181Z",
-//         age: 10
-//       },
-//       phone: "0983-8601607",
-//       cell: "0172-4792662",
-//       id: {
-//         name: "SVNR",
-//         value: "78 120153 K 433"
-//       },
-//       nat: "DE"
-//   },
-//   {
-//       rank: 4,
-//       picture: null,
-//       login: null,
-//       gender: "male",
-//       name: {
-//         title: "Mr",
-//         first: "علی رضا",
-//         last: "کامروا"
-//       },
-//       location: {
-//         street: {
-//           number: 4140,
-//           name: "مقدس اردبیلی"
-//         },
-//         city: "آمل",
-//         state: "خراسان رضوی",
-//         country: "Iran",
-//         postcode: 79670,
-//         coordinates: {
-//           latitude: "-23.4461",
-//           longitude: "159.1358"
-//         },
-//         timezone: {
-//           offset: "+5:30",
-//           description: "Bombay, Calcutta, Madras, New Delhi"
-//         }
-//       },
-//       email: "aalyrd.khmrw@example.com",
-//       dob: {
-//         date: "1977-09-15T05:49:55.524Z",
-//         age: 45
-//       },
-//       registered: {
-//         date: "2019-03-24T17:59:34.309Z",
-//         age: 3
-//       },
-//       phone: "013-71356495",
-//       cell: "0946-413-4693",
-//       id: {
-//         name: "",
-//         value: null
-//       },
-//       nat: "IR"
-//   },
-//   {
-//       rank: 5,
-//       picture: null,
-//       login: null,
-//       gender: "female",
-//       name: {
-//         title: "Miss",
-//         first: "Hazel",
-//         last: "Thomas"
-//       },
-//       location: {
-//         street: {
-//           number: 1460,
-//           name: "Photinia Ave"
-//         },
-//         city: "Warragul",
-//         state: "New South Wales",
-//         country: "Australia",
-//         postcode: 5042,
-//         coordinates: {
-//           latitude: "43.5532",
-//           longitude: "-86.4504"
-//         },
-//         timezone: {
-//           offset: "-3:30",
-//           description: "Newfoundland"
-//         }
-//       },
-//       email: "hazel.thomas@example.com",
-//       dob: {
-//         date: "1970-06-11T20:07:41.572Z",
-//         age: 52
-//       },
-//       registered: {
-//         date: "2013-01-03T13:42:38.535Z",
-//         age: 9
-//       },
-//       phone: "03-4929-9856",
-//       cell: "0425-477-336",
-//       id: {
-//         name: "TFN",
-//         value: "457057693"
-//       },
-//       nat: "AU"
-//   },
-//   {
-//       rank: 6,
-//       picture: null,
-//       login: null,
-//       gender: "male",
-//       name: {
-//         title: "Mr",
-//         first: "Draško",
-//         last: "Vrhovac"
-//       },
-//       location: {
-//         street: {
-//           number: 8213,
-//           name: "Gorana Gajića "
-//         },
-//         city: "Bajina Bašta",
-//         state: "Kosovska Mitrovica",
-//         country: "Serbia",
-//         postcode: 42311,
-//         coordinates: {
-//           latitude: "-88.7643",
-//           longitude: "29.6682"
-//         },
-//         timezone: {
-//           offset: "+9:30",
-//           description: "Adelaide, Darwin"
-//         }
-//       },
-//       email: "drasko.vrhovac@example.com",
-//       dob: {
-//         date: "1952-11-23T02:34:30.368Z",
-//         age: 69
-//       },
-//       registered: {
-//         date: "2008-07-28T05:21:09.587Z",
-//         age: 14
-//       },
-//       phone: "031-8926-918",
-//       cell: "068-5436-171",
-//       id: {
-//         name: "SID",
-//         value: "752248622"
-//       },
-//       nat: "RS"
-//   },
-//   {
-//       rank: 7,
-//       picture: null,
-//       login: null,
-//       gender: "male",
-//       name: {
-//         title: "Mr",
-//         first: "Maanas",
-//         last: "Shah"
-//       },
-//       location: {
-//         street: {
-//           number: 6379,
-//           name: "Lindsay St"
-//         },
-//         city: "Pimpri-Chinchwad",
-//         state: "Assam",
-//         country: "India",
-//         postcode: 72002,
-//         coordinates: {
-//           latitude: "-64.4359",
-//           longitude: "119.9860"
-//         },
-//         timezone: {
-//           offset: "-7:00",
-//           description: "Mountain Time (US & Canada)"
-//         }
-//       },
-//       email: "maanas.shah@example.com",
-//       dob: {
-//         date: "1995-03-10T01:50:38.821Z",
-//         age: 27
-//       },
-//       registered: {
-//         date: "2022-02-09T07:08:02.382Z",
-//         age: 0
-//       },
-//       phone: "9740776121",
-//       cell: "9893868724",
-//       id: {
-//         name: "UIDAI",
-//         value: "031653299141"
-//       },
-//       nat: "IN"
-//   },
-//   {
-//       rank: 8,
-//       picture: null,
-//       login: null,
-//       gender: "female",
-//       name: {
-//         title: "Miss",
-//         first: "Florence",
-//         last: "Ross"
-//       },
-//       location: {
-//         street: {
-//           number: 5320,
-//           name: "Richmond Ave"
-//         },
-//         city: "Charlottetown",
-//         state: "Northwest Territories",
-//         country: "Canada",
-//         postcode: "A3Z 4V8",
-//         coordinates: {
-//           latitude: "-17.9171",
-//           longitude: "7.7062"
-//         },
-//         timezone: {
-//           offset: "-7:00",
-//           description: "Mountain Time (US & Canada)"
-//         }
-//       },
-//       email: "florence.ross@example.com",
-//       dob: {
-//         date: "1964-03-07T07:37:18.581Z",
-//         age: 58
-//       },
-//       registered: {
-//         date: "2012-06-08T23:34:33.168Z",
-//         age: 10
-//       },
-//       phone: "T30 E48-0352",
-//       cell: "Q41 R56-8833",
-//       id: {
-//         name: "SIN",
-//         value: "542048327"
-//       },
-//       nat: "CA"
-//   },
-//   {
-//       rank: 9,
-//       picture: null,
-//       login: null,
-//       gender: "male",
-//       name: {
-//         title: "Mr",
-//         first: "Batur",
-//         last: "Polat"
-//       },
-//       location: {
-//         street: {
-//           number: 9697,
-//           name: "Necatibey Cd"
-//         },
-//         city: "Kocaeli",
-//         state: "Antalya",
-//         country: "Turkey",
-//         postcode: 96829,
-//         coordinates: {
-//           latitude: "-33.3036",
-//           longitude: "-142.5320"
-//         },
-//         timezone: {
-//           offset: "+3:00",
-//           description: "Baghdad, Riyadh, Moscow, St. Petersburg"
-//         }
-//       },
-//       email: "batur.polat@example.com",
-//       dob: {
-//         date: "1993-02-13T04:37:02.427Z",
-//         age: 29
-//       },
-//       registered: {
-//         date: "2021-11-07T14:34:38.168Z",
-//         age: 0
-//       },
-//       phone: "(386)-418-4775",
-//       cell: "(869)-554-8950",
-//       id: {
-//         name: "",
-//         value: null
-//       },
-//       nat: "TR"
-//   },
-//   {
-//       rank: 10,
-//       picture: null,
-//       login: null,
-//       gender: "male",
-//       name: {
-//         title: "Mr",
-//         first: "Elias",
-//         last: "Roche"
-//       },
-//       location: {
-//         street: {
-//           number: 5732,
-//           name: "Rue Barrème"
-//         },
-//         city: "Aulnay-sous-Bois",
-//         state: "Deux-Sèvres",
-//         country: "France",
-//         postcode: 79740,
-//         coordinates: {
-//           latitude: "24.8296",
-//           longitude: "-20.3798"
-//         },
-//         timezone: {
-//           offset: "-10:00",
-//           description: "Hawaii"
-//         }
-//       },
-//       email: "elias.roche@example.com",
-//       dob: {
-//         date: "1999-10-23T15:25:25.117Z",
-//         age: 22
-//       },
-//       registered: {
-//         date: "2005-12-30T17:24:14.248Z",
-//         age: 16
-//       },
-//       phone: "02-70-47-69-11",
-//       cell: "06-85-12-33-75",
-//       id: {
-//         name: "INSEE",
-//         value: "1990995506289 04"
-//       },
-//       nat: "FR"
-//   }
-// ]
+const developers1:Developer[] = [
+  {
+        _id: null,
+        gender: "female",
+        name: {
+            title: "Mrs",
+            first: "Mathilde",
+            last: "Christensen"
+        },
+        location: {
+            street: {
+                number: 6085,
+                name: "Kærbyvej"
+            },
+            city: "Roedovre",
+            state: "Midtjylland",
+            country: "Denmark",
+            postcode: 45746,
+            coordinates: {
+                latitude: "-41.0211",
+                longitude: "60.9123"
+            },
+            timezone: {
+                offset: "+8:00",
+                description: "Beijing, Perth, Singapore, Hong Kong"
+            }
+        },
+        email: "mathilde.christensen@example.com",
+        dob: {
+            date: "1997-02-03T02:43:18.369Z",
+            age: 25
+        },
+        registered: {
+            date: "2014-08-08T15:14:50.008Z",
+            age: 8
+        },
+        phone: "97595174",
+        cell: "21475840",
+        id: {
+            name: "CPR",
+            value: "020297-5436"
+        },
+        nat: "DK"
+    },
+    {
+        _id: null,
+        gender: "male",
+        name: {
+            title: "Mr",
+            first: "Kevin",
+            last: "Hunt"
+        },
+        location: {
+            street: {
+                number: 8559,
+                name: "Green Rd"
+            },
+            city: "Albany",
+            state: "New South Wales",
+            country: "Australia",
+            postcode: 5229,
+            coordinates: {
+                latitude: "-13.9773",
+                longitude: "-81.8810"
+            },
+            timezone: {
+                offset: "+7:00",
+                description: "Bangkok, Hanoi, Jakarta"
+            }
+        },
+        email: "kevin.hunt@example.com",
+        dob: {
+            date: "1971-01-24T13:47:51.624Z",
+            age: 51
+        },
+        registered: {
+            date: "2003-12-05T00:53:50.279Z",
+            age: 18
+        },
+        phone: "07-3921-0851",
+        cell: "0425-556-455",
+        id: {
+            name: "TFN",
+            value: "219026706"
+        },
+        nat: "AU"
+    },
+    {
+        _id: null,
+        gender: "male",
+        name: {
+            title: "Mr",
+            first: "Vassilios",
+            last: "Kilic"
+        },
+        location: {
+            street: {
+                number: 7654,
+                name: "Mittelstraße"
+            },
+            city: "Langenhagen",
+            state: "Thüringen",
+            country: "Germany",
+            postcode: 40474,
+            coordinates: {
+                latitude: "10.3137",
+                longitude: "39.3670"
+            },
+            timezone: {
+                offset: "+5:00",
+                description: "Ekaterinburg, Islamabad, Karachi, Tashkent"
+            }
+        },
+        email: "vassilios.kilic@example.com",
+        dob: {
+            date: "1953-01-12T16:06:35.417Z",
+            age: 69
+        },
+        registered: {
+            date: "2012-06-30T05:29:50.181Z",
+            age: 10
+        },
+        phone: "0983-8601607",
+        cell: "0172-4792662",
+        id: {
+            name: "SVNR",
+            value: "78 120153 K 433"
+        },
+        nat: "DE"
+    },
+    {
+        _id: null,
+        gender: "male",
+        name: {
+            title: "Mr",
+            first: "علی رضا",
+            last: "کامروا"
+        },
+        location: {
+            street: {
+                number: 4140,
+                name: "مقدس اردبیلی"
+            },
+            city: "آمل",
+            state: "خراسان رضوی",
+            country: "Iran",
+            postcode: 79670,
+            coordinates: {
+                latitude: "-23.4461",
+                longitude: "159.1358"
+            },
+            timezone: {
+                offset: "+5:30",
+                description: "Bombay, Calcutta, Madras, New Delhi"
+            }
+        },
+        email: "aalyrd.khmrw@example.com",
+        dob: {
+            date: "1977-09-15T05:49:55.524Z",
+            age: 45
+        },
+        registered: {
+            date: "2019-03-24T17:59:34.309Z",
+            age: 3
+        },
+        phone: "013-71356495",
+        cell: "0946-413-4693",
+        id: {
+            name: "",
+            value: null
+        },
+        nat: "IR"
+    },
+    {
+        _id: null,
+        gender: "female",
+        name: {
+            title: "Miss",
+            first: "Hazel",
+            last: "Thomas"
+        },
+        location: {
+            street: {
+                number: 1460,
+                name: "Photinia Ave"
+            },
+            city: "Warragul",
+            state: "New South Wales",
+            country: "Australia",
+            postcode: 5042,
+            coordinates: {
+                latitude: "43.5532",
+                longitude: "-86.4504"
+            },
+            timezone: {
+                offset: "-3:30",
+                description: "Newfoundland"
+            }
+        },
+        email: "hazel.thomas@example.com",
+        dob: {
+            date: "1970-06-11T20:07:41.572Z",
+            age: 52
+        },
+        registered: {
+            date: "2013-01-03T13:42:38.535Z",
+            age: 9
+        },
+        phone: "03-4929-9856",
+        cell: "0425-477-336",
+        id: {
+            name: "TFN",
+            value: "457057693"
+        },
+        nat: "AU"
+    },
+    {
+        _id: null,
+        gender: "male",
+        name: {
+            title: "Mr",
+            first: "Draško",
+            last: "Vrhovac"
+        },
+        location: {
+            street: {
+                number: 8213,
+                name: "Gorana Gajića "
+            },
+            city: "Bajina Bašta",
+            state: "Kosovska Mitrovica",
+            country: "Serbia",
+            postcode: 42311,
+            coordinates: {
+                latitude: "-88.7643",
+                longitude: "29.6682"
+            },
+            timezone: {
+                offset: "+9:30",
+                description: "Adelaide, Darwin"
+            }
+        },
+        email: "drasko.vrhovac@example.com",
+        dob: {
+            date: "1952-11-23T02:34:30.368Z",
+            age: 69
+        },
+        registered: {
+            date: "2008-07-28T05:21:09.587Z",
+            age: 14
+        },
+        phone: "031-8926-918",
+        cell: "068-5436-171",
+        id: {
+            name: "SID",
+            value: "752248622"
+        },
+        nat: "RS"
+    },
+    {
+        _id: null,
+        gender: "male",
+        name: {
+            title: "Mr",
+            first: "Maanas",
+            last: "Shah"
+        },
+        location: {
+            street: {
+                number: 6379,
+                name: "Lindsay St"
+            },
+            city: "Pimpri-Chinchwad",
+            state: "Assam",
+            country: "India",
+            postcode: 72002,
+            coordinates: {
+                latitude: "-64.4359",
+                longitude: "119.9860"
+            },
+            timezone: {
+                offset: "-7:00",
+                description: "Mountain Time (US & Canada)"
+            }
+        },
+        email: "maanas.shah@example.com",
+        dob: {
+            date: "1995-03-10T01:50:38.821Z",
+            age: 27
+        },
+        registered: {
+            date: "2022-02-09T07:08:02.382Z",
+            age: 0
+        },
+        phone: "9740776121",
+        cell: "9893868724",
+        id: {
+            name: "UIDAI",
+            value: "031653299141"
+        },
+        nat: "IN"
+    },
+    {
+        _id: null,
+        gender: "female",
+        name: {
+            title: "Miss",
+            first: "Florence",
+            last: "Ross"
+        },
+        location: {
+            street: {
+                number: 5320,
+                name: "Richmond Ave"
+            },
+            city: "Charlottetown",
+            state: "Northwest Territories",
+            country: "Canada",
+            postcode: "A3Z 4V8",
+            coordinates: {
+                latitude: "-17.9171",
+                longitude: "7.7062"
+            },
+            timezone: {
+                offset: "-7:00",
+                description: "Mountain Time (US & Canada)"
+            }
+        },
+        email: "florence.ross@example.com",
+        dob: {
+            date: "1964-03-07T07:37:18.581Z",
+            age: 58
+        },
+        registered: {
+            date: "2012-06-08T23:34:33.168Z",
+            age: 10
+        },
+        phone: "T30 E48-0352",
+        cell: "Q41 R56-8833",
+        id: {
+            name: "SIN",
+            value: "542048327"
+        },
+        nat: "CA"
+    },
+    {
+        _id: null,
+        gender: "male",
+        name: {
+            title: "Mr",
+            first: "Batur",
+            last: "Polat"
+        },
+        location: {
+            street: {
+                number: 9697,
+                name: "Necatibey Cd"
+            },
+            city: "Kocaeli",
+            state: "Antalya",
+            country: "Turkey",
+            postcode: 96829,
+            coordinates: {
+                latitude: "-33.3036",
+                longitude: "-142.5320"
+            },
+            timezone: {
+                offset: "+3:00",
+                description: "Baghdad, Riyadh, Moscow, St. Petersburg"
+            }
+        },
+        email: "batur.polat@example.com",
+        dob: {
+            date: "1993-02-13T04:37:02.427Z",
+            age: 29
+        },
+        registered: {
+            date: "2021-11-07T14:34:38.168Z",
+            age: 0
+        },
+        phone: "(386)-418-4775",
+        cell: "(869)-554-8950",
+        id: {
+            name: "",
+            value: null
+        },
+        nat: "TR"
+    },
+    {
+        _id: null,
+        gender: "male",
+        name: {
+            title: "Mr",
+            first: "Elias",
+            last: "Roche"
+        },
+        location: {
+            street: {
+                number: 5732,
+                name: "Rue Barrème"
+            },
+            city: "Aulnay-sous-Bois",
+            state: "Deux-Sèvres",
+            country: "France",
+            postcode: 79740,
+            coordinates: {
+                latitude: "24.8296",
+                longitude: "-20.3798"
+            },
+            timezone: {
+                offset: "-10:00",
+                description: "Hawaii"
+            }
+        },
+        email: "elias.roche@example.com",
+        dob: {
+            date: "1999-10-23T15:25:25.117Z",
+            age: 22
+        },
+        registered: {
+            date: "2005-12-30T17:24:14.248Z",
+            age: 16
+        },
+        phone: "02-70-47-69-11",
+        cell: "06-85-12-33-75",
+        id: {
+            name: "INSEE",
+            value: "1990995506289 04"
+        },
+        nat: "FR"
+    }
+]
 
 // const developers2:Developer[] = [
-//   {
-//       rank: 1,
-//       picture: null,
-//       login: null,
+
+    // _id: null,
 //       gender: "male",
 //       name: {
 //         title: "Mr",
@@ -1029,10 +988,8 @@ export const hackathonToTestInsert:Hackathon = {
 //       },
 //       nat: "FR"
 //     },
-//     {
-//       rank: 2,
-//       picture: null,
-//       login: null,
+
+    // _id: null,
 //       gender: "male",
 //       name: {
 //         title: "Mr",
@@ -1074,10 +1031,8 @@ export const hackathonToTestInsert:Hackathon = {
 //       },
 //       nat: "IN"
 //     },
-//     {
-//       rank: 3,
-//       picture: null,
-//       login: null,
+
+    // _id: null,
 //       gender: "male",
 //       name: {
 //         title: "Mr",
@@ -1119,10 +1074,8 @@ export const hackathonToTestInsert:Hackathon = {
 //       },
 //       nat: "GB"
 //     },
-//     {
-//       rank: 4,
-//       picture: null,
-//       login: null,
+
+    // _id: null,
 //       gender: "male",
 //       name: {
 //         title: "Mr",
@@ -1164,10 +1117,8 @@ export const hackathonToTestInsert:Hackathon = {
 //       },
 //       nat: "RS"
 //     },
-//     {
-//       rank: 5,
-//       picture: null,
-//       login: null,
+
+    // _id: null,
 //       gender: "female",
 //       name: {
 //         title: "Ms",
@@ -1209,10 +1160,8 @@ export const hackathonToTestInsert:Hackathon = {
 //       },
 //       nat: "CA"
 //     },
-//     {
-//       rank: 6,
-//       picture: null,
-//       login: null,
+
+    // _id: null,
 //       gender: "female",
 //       name: {
 //         title: "Miss",
@@ -1254,10 +1203,8 @@ export const hackathonToTestInsert:Hackathon = {
 //       },
 //       nat: "IN"
 //     },
-//     {
-//       rank: 7,
-//       picture: null,
-//       login: null,
+
+    // _id: null,
 //       gender: "female",
 //       name: {
 //         title: "Mrs",
@@ -1299,10 +1246,8 @@ export const hackathonToTestInsert:Hackathon = {
 //       },
 //       nat: "NO"
 //     },
-//     {
-//       rank: 8,
-//       picture: null,
-//       login: null,
+
+    // _id: null,
 //       gender: "female",
 //       name: {
 //         title: "Mrs",
@@ -1344,10 +1289,8 @@ export const hackathonToTestInsert:Hackathon = {
 //       },
 //       nat: "IR"
 //     },
-//     {
-//       rank: 9,
-//       picture: null,
-//       login: null,
+
+    // _id: null,
 //       gender: "female",
 //       name: {
 //         title: "Ms",
@@ -1389,10 +1332,8 @@ export const hackathonToTestInsert:Hackathon = {
 //       },
 //       nat: "CA"
 //     },
-//     {
-//       rank: 10,
-//       picture: null,
-//       login: null,
+
+    // _id: null,
 //       gender: "male",
 //       name: {
 //         title: "Mr",

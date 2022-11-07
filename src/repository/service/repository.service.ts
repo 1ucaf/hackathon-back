@@ -24,7 +24,7 @@ export class RepositoryService {
         // console.log(developer.raw.ops);
         return developer.raw.ops;
     }
-    async insertHackathon(hackathonToInsert:Hackathon):Promise<Developer> {
+    async insertHackathon(hackathonToInsert:Hackathon) {
         const hackathon = await this.hackathonRepository.insert(hackathonToInsert);
         // console.log(hackathon.raw.ops);
         return hackathon.raw.ops;
